@@ -12,12 +12,12 @@ public class Lesson {
             //interesting ops
 
 
-            if ("6".equals(choice)) {
-                 break;
-            }
+            //if ("6".equals(choice)) {
+            //     break;
+            //}
            
         } while(true);
 
-        in.close();
+        //in.close();
     }
 }

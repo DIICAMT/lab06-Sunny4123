@@ -4,8 +4,9 @@ import java.util.Scanner;
 import java.util.ArrayList; //this exercise MUST use arrayList
 
 public class Lesson {
-    public static void run() {
 
+    public static void run() {
+        ArrayList<Shape> shapes = new ArrayList<Shape>();
         //HINT1: usage arraylist with Shape class to store all of your shapes, check how to use arrayList by yourself
 
         //HINT2: you may want to declare your arrayList around here
@@ -15,6 +16,12 @@ public class Lesson {
         do {
             System.out.println();
             //print menu as instructed in MD file
+            System.out.println("""
+                    1. Circle
+                    2. Rectangle
+                    3. Square
+                    4. Display all shape
+                    5. exit""");
 
             String choice = in.nextLine().trim();
 
@@ -23,6 +30,8 @@ public class Lesson {
             if ("1".equals(choice)) {
                 System.out.print("Enter radius: ");
                 String strRadius = in.nextLine();
+                shapes.add(new Circle("Circle",strRadius));
+
                 
                 //store to arrayList
             }
@@ -31,18 +40,22 @@ public class Lesson {
                 String strWidth = in.nextLine();
                 System.out.print("Enter height: ");
                 String strHeight = in.nextLine();
+                shapes.add(new Rectangle("Rectangle",strWidth,strHeight));
+
                 
                 //store to arrayList
             }
             if ("3".equals(choice)) {
                 System.out.print("Enter side: ");
                 String strSide = in.nextLine();
-                
+                shapes.add(new Square("Square",strSide));
                 //store to arrayList
             }
             if ("4".equals(choice)) {
-                System.out.print("List all shape: ");
-                
+                System.out.print("List all shape: \n");
+                for (Shape shape : shapes) {
+                    System.out.println(shape.getName() +" Number of side: " + shape.getNumSides() +" Area: " + shape.getArea() + " Perimeter: " +shape.getPerimeter());
+                }
                 //print data as instructed
                 //check how to iterate through arrayList
 
