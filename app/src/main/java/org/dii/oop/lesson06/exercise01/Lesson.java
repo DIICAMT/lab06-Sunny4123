@@ -1,5 +1,6 @@
 package org.dii.oop.lesson06.exercise01;
 
+
 import java.util.Scanner;
 import java.util.ArrayList; //this exercise MUST use arrayList
 
@@ -12,7 +13,6 @@ public class Lesson {
         //HINT2: you may want to declare your arrayList around here
 
         Scanner in = new Scanner(System.in);
-
         do {
             System.out.println();
             //print menu as instructed in MD file
@@ -21,7 +21,8 @@ public class Lesson {
                     2. Rectangle
                     3. Square
                     4. Display all shape
-                    5. exit""");
+                    5. Show summation of area
+                    6. exit""");
 
             String choice = in.nextLine().trim();
 
@@ -61,7 +62,10 @@ public class Lesson {
 
                 //HINT3: you can use getClass() function of arrayList to get the name of class. It might be useful : )
             }
-            if ("5".equals(choice)) {
+            if("5".equals(choice)){
+
+            }
+            if ("6".equals(choice)) {
                  break;
             }
            
